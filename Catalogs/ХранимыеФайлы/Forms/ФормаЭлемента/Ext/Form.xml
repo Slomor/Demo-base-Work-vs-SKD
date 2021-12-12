@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="Криптография" id="12">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Криптография</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Криптография</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="КриптографияРасширеннаяПодсказка" id="24"/>
+				<ChildItems>
+					<Button name="Подписать" id="13">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Подписать</CommandName>
+						<ExtendedTooltip name="ПодписатьРасширеннаяПодсказка" id="25"/>
+					</Button>
+					<Button name="ПроверитьПодпись" id="14">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПроверитьПодпись</CommandName>
+						<ExtendedTooltip name="ПроверитьПодписьРасширеннаяПодсказка" id="26"/>
+					</Button>
+					<Button name="ПоместитьЗашифрованныйНаСервер" id="15">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПоместитьЗашифрованныйНаСервер</CommandName>
+						<ExtendedTooltip name="ПоместитьЗашифрованныйНаСерверРасширеннаяПодсказка" id="27"/>
+					</Button>
+					<Button name="Зашифровать" id="18">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Зашифровать</CommandName>
+						<ExtendedTooltip name="ЗашифроватьРасширеннаяПодсказка" id="28"/>
+					</Button>
+					<Button name="ПолучитьСРасшифровкой" id="16">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПолучитьСРасшифровкой</CommandName>
+						<ExtendedTooltip name="ПолучитьСРасшифровкойРасширеннаяПодсказка" id="29"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Владелец" id="4">
+			<DataPath>Объект.Owner</DataPath>
+			<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+			<Wrap>false</Wrap>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="Код" id="2">
+			<DataPath>Объект.Code</DataPath>
+			<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+			<Wrap>false</Wrap>
+			<ContextMenu name="КодКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+			<Wrap>false</Wrap>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="32"/>
+		</InputField>
+		<InputField name="ИмяФайла" id="8">
+			<DataPath>Объект.ИмяФайла</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+			<Wrap>false</Wrap>
+			<ContextMenu name="ИмяФайлаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИмяФайлаРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<UsualGroup name="ГруппаФлажков" id="19">
+			<ReadOnly>true</ReadOnly>
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа флажков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа флажков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФлажковРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<CheckBoxField name="Подписан" id="20">
+					<DataPath>Объект.Подписан</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодписанКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПодписанРасширеннаяПодсказка" id="35"/>
+				</CheckBoxField>
+				<CheckBoxField name="Зашифрован" id="22">
+					<DataPath>Объект.Зашифрован</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗашифрованКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ЗашифрованРасширеннаяПодсказка" id="36"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="ВыбратьФайлСДискаИЗаписать" id="6">
+			<Type>Hyperlink</Type>
+			<SkipOnInput>false</SkipOnInput>
+			<CommandName>Form.Command.ВыбратьФайлСДискаИЗаписать</CommandName>
+			<TextColor>#1C55AE</TextColor>
+			<BackColor>style:ButtonBackColor</BackColor>
+			<BorderColor>style:BorderColor</BorderColor>
+			<ExtendedTooltip name="ВыбратьФайлСДискаИЗаписатьРасширеннаяПодсказка" id="37"/>
+		</Button>
+		<Button name="ПрочитатьФайлИСохранитьНаДиск" id="7">
+			<Type>Hyperlink</Type>
+			<SkipOnInput>false</SkipOnInput>
+			<CommandName>Form.Command.ПрочитатьФайлИСохранитьНаДиск</CommandName>
+			<TextColor>#1C55AE</TextColor>
+			<BackColor>style:ButtonBackColor</BackColor>
+			<BorderColor>style:BorderColor</BorderColor>
+			<ExtendedTooltip name="ПрочитатьФайлИСохранитьНаДискРасширеннаяПодсказка" id="38"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ХранимыеФайлы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.ДанныеФайла</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьФайлСДискаИЗаписать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать файл с диска и записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать файл с диска и записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьФайлСДискаИЗаписать</Action>
+		</Command>
+		<Command name="ПрочитатьФайлИСохранитьНаДиск" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать файл и сохранить на диск</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать файл и сохранить на диск</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьФайлИСохранитьНаДиск</Action>
+		</Command>
+		<Command name="Подписать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать записанный файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать файл от нашего имени</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подписать</Action>
+		</Command>
+		<Command name="ПроверитьПодпись" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подпись записанного файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить ЭЦП этого файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПодпись</Action>
+		</Command>
+		<Command name="ПоместитьЗашифрованныйНаСервер" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать файл с диска, зашифровать и записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поместить зашифрованный файл на сервер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоместитьЗашифрованныйНаСервер</Action>
+		</Command>
+		<Command name="ПолучитьСРасшифровкой" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать файл, расшифровать и сохранить на диск</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получет расшифрованный файл, сохраняет на диск, при наличии расширения производится попытка открыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьСРасшифровкой</Action>
+		</Command>
+		<Command name="Зашифровать" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зашифровать записанный файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получает незашифрованный файл с сервера, шифрует его открытым ключом контрагента, которому принадлежит файл, и помещает на сервер. Подписи файла, если имеются, остаются соответствующими незашифрованной версии документа.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Зашифровать</Action>
+		</Command>
+	</Commands>
+</Form>

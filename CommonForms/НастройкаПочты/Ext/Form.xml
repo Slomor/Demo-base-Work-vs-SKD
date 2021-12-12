@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ИмяОтправителя" id="54">
+			<DataPath>Объект.ИмяОтправителяПочтовогоСообщения</DataPath>
+			<ContextMenu name="ИмяОтправителяКонтекстноеМеню" id="55"/>
+			<ExtendedTooltip name="ИмяОтправителяРасширеннаяПодсказка" id="76"/>
+		</InputField>
+		<UsualGroup name="ГруппаНастройкаSMTPСервера" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка SMTP сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройка SMTPСервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкаSMTPСервераРасширеннаяПодсказка" id="77"/>
+			<ChildItems>
+				<InputField name="АдресSMTPСервера" id="58">
+					<DataPath>Объект.АдресSMTPСервера</DataPath>
+					<ContextMenu name="АдресSMTPСервераКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="АдресSMTPСервераРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<InputField name="ПортSMTP" id="60">
+					<DataPath>Объект.ПортSMTP</DataPath>
+					<ContextMenu name="ПортSMTPКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ПортSMTPРасширеннаяПодсказка" id="79"/>
+				</InputField>
+				<InputField name="АутентификацияSMTP" id="62">
+					<DataPath>Объект.АутентификацияSMTP</DataPath>
+					<ContextMenu name="АутентификацияSMTPКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="АутентификацияSMTPРасширеннаяПодсказка" id="80"/>
+					<Events>
+						<Event name="OnChange">АутентификацияSMTPПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПользовательSMTP" id="64">
+					<DataPath>Объект.ПользовательSMTP</DataPath>
+					<ContextMenu name="ПользовательSMTPКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ПользовательSMTPРасширеннаяПодсказка" id="81"/>
+				</InputField>
+				<InputField name="ПарольSMTP" id="66">
+					<DataPath>Объект.ПарольSMTP</DataPath>
+					<ContextMenu name="ПарольSMTPКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ПарольSMTPРасширеннаяПодсказка" id="82"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкаPOP3Сервера" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка POP3 сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройка POP3 сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкаPOP3СервераРасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<InputField name="АдресPOP3Сервера" id="68">
+					<DataPath>Объект.АдресPOP3Сервера</DataPath>
+					<ContextMenu name="АдресPOP3СервераКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="АдресPOP3СервераРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<InputField name="ПортPOP3" id="70">
+					<DataPath>Объект.ПортPOP3</DataPath>
+					<ContextMenu name="ПортPOP3КонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ПортPOP3РасширеннаяПодсказка" id="85"/>
+				</InputField>
+				<InputField name="ПользовательPOP3" id="72">
+					<DataPath>Объект.ПользовательPOP3</DataPath>
+					<ContextMenu name="ПользовательPOP3КонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ПользовательPOP3РасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="ПарольPOP3" id="74">
+					<DataPath>Объект.ПарольPOP3</DataPath>
+					<ContextMenu name="ПарольPOP3КонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ПарольPOP3РасширеннаяПодсказка" id="87"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Таймаут" id="56">
+			<DataPath>Объект.ТаймаутИнтернетПочты</DataPath>
+			<ContextMenu name="ТаймаутКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="ТаймаутРасширеннаяПодсказка" id="88"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ТекущийПользователь">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>
